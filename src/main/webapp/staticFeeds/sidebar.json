@@ -1,7 +1,0 @@
-{"sidebar" :  
-            [
-                {"title": "Home", "hyperlink" : "/", "target" : "", "faIcon" : "fa-home", "displayFlag" : ""},
-                {"title": "Beta Settings", "hyperlink" : "settings", "target" : "", "faIcon" : "fa-cog", "displayFlag" : "sidebarShowSettings"},
-                {"title": "Log out", "hyperlink" : "/portal/Logout", "target" : "", "faIcon" : "fa-sign-out", "displayFlag" : ""}
-            ]
-}

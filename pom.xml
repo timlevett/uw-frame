@@ -114,7 +114,6 @@
         <executions>
           <execution>
             <id>copy-resources</id>
-            <!-- here the phase you need -->
             <phase>validate</phase>
             <goals>
               <goal>copy-resources</goal>
@@ -125,6 +124,36 @@
                 <resource>
                   <directory>src/main/filtered-resources</directory>
                   <filtering>true</filtering>
+                </resource>
+              </resources>
+            </configuration>            
+          </execution>
+          <execution>
+            <id>copy-static-content</id>
+            <phase>validate</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${basedir}/target/frame/</outputDirectory>
+              <resources>          
+                <resource>
+                  <directory>src/main/webapp/bower_components/tim-uw-static-frame</directory>
+                </resource>
+              </resources>
+            </configuration>            
+          </execution>
+          <execution>
+            <id>copy-static-css</id>
+            <phase>validate</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>src/main/webapp/css</outputDirectory>
+              <resources>          
+                <resource>
+                  <directory>src/main/webapp/bower_components/tim-uw-static-frame/css</directory>
                 </resource>
               </resources>
             </configuration>            
@@ -156,7 +185,7 @@
         <artifactId>lesscss-maven-plugin</artifactId>
         <version>1.7.0.1.1</version>
         <configuration>
-          <sourceDirectory>${project.basedir}/src/main/webapp/css/</sourceDirectory>
+          <sourceDirectory>src/main/webapp/css/</sourceDirectory>
           <outputDirectory>${webapp.target.directory}/css/</outputDirectory>
           <compress>true</compress>
           <includes>

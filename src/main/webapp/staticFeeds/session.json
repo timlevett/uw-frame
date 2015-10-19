@@ -1,9 +1,0 @@
-{
-  "person": {
-    "userName": "userx",
-    "sessionKey": "someRandomKey",
-    "serverName": "localhost",
-    "displayName": "Bucky Badger",
-    "version": "1.0.0"
-  }
-}
